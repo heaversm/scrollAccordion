@@ -90,7 +90,7 @@ export class Tout extends React.PureComponent { //using PureComponent will preve
     }
   }
 
-  showToutSubcatgories = (pageY, height) => {
+  showToutSubcatgories = () => {
     this.setState({ toutSubcategoriesVisible: true })
     Animated.timing(this.animatedValue, { //animating this value from zero to one will update the subcategory container height, which interpolates this value
       toValue: 1,
@@ -108,7 +108,7 @@ export class Tout extends React.PureComponent { //using PureComponent will preve
 
   }
 
-  hideToutSubcatgories = (pageY, height) => {
+  hideToutSubcatgories = () => {
     Animated.timing(this.animatedValue, {
       toValue: 0,
       duration: SUBCATEGORY_FADE_TIME,
